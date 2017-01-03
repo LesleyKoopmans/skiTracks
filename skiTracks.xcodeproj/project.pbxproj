@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		671E62D51E1C114C00EDCD96 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		671E62D71E1C2CCF00EDCD96 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		671E62D91E1C4B9A00EDCD96 /* skiTracks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = skiTracks.entitlements; sourceTree = "<group>"; };
 		67BFBFD71E1AF28700AECEF5 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		67BFBFD91E1AF8E600AECEF5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		67DB3C381E183F3300F617BE /* skiTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skiTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +84,7 @@
 		67DB3C3A1E183F3300F617BE /* skiTracks */ = {
 			isa = PBXGroup;
 			children = (
+				671E62D91E1C4B9A00EDCD96 /* skiTracks.entitlements */,
 				67FDC1771E1AD31300E71B99 /* Service */,
 				67DB3C4F1E183FEC00F617BE /* Model */,
 				67DB3C501E18400100F617BE /* View */,
@@ -190,6 +192,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SN6U85AYBY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -413,6 +420,7 @@
 			baseConfigurationReference = 6D0AEFF9E70BF04E26323020 /* Pods-skiTracks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = skiTracks/skiTracks.entitlements;
 				DEVELOPMENT_TEAM = SN6U85AYBY;
 				INFOPLIST_FILE = skiTracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -428,6 +436,7 @@
 			baseConfigurationReference = C8AAC3494D93CFDF5546B555 /* Pods-skiTracks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = skiTracks/skiTracks.entitlements;
 				DEVELOPMENT_TEAM = SN6U85AYBY;
 				INFOPLIST_FILE = skiTracks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

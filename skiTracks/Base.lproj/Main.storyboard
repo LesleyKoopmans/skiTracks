@@ -232,7 +232,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ski Tracks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-oP-hAS">
-                                        <rect key="frame" x="100" y="27" width="180" height="46.5"/>
+                                        <rect key="frame" x="100" y="27" width="180" height="47"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -310,11 +310,45 @@
                                     <action selector="loginBtnPressed:" destination="hnc-9H-fGk" eventType="touchUpInside" id="Wkl-e1-Ewq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Of login met" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-c7-EgC">
+                                <rect key="frame" x="106" y="414" width="107" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="0cz-5H-rSw"/>
+                                    <constraint firstAttribute="height" constant="24" id="RJp-gL-s00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-Wd-OpU" customClass="RoundButton" customModule="skiTracks" customModuleProvider="target">
+                                <rect key="frame" x="40" y="446" width="240" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="KSI-EW-tQC"/>
+                                    <constraint firstAttribute="width" constant="240" id="N6Z-E8-zg7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookLoginPressed:" destination="hnc-9H-fGk" eventType="touchUpInside" id="FM0-yB-2hQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ruy-sc-6Cp" firstAttribute="top" secondItem="JgI-dY-YFe" secondAttribute="bottom" constant="50" id="6eG-Sd-QVg"/>
+                            <constraint firstItem="pqA-Wd-OpU" firstAttribute="top" secondItem="AEh-c7-EgC" secondAttribute="bottom" constant="8" id="6ey-Bh-d6m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vzH-Oy-5SP" secondAttribute="trailing" constant="24" id="7Cy-Wc-vRh"/>
+                            <constraint firstItem="pqA-Wd-OpU" firstAttribute="centerX" secondItem="orS-j1-6t4" secondAttribute="centerX" id="D0Y-Wy-ZjV"/>
                             <constraint firstItem="e92-S6-NLg" firstAttribute="leading" secondItem="orS-j1-6t4" secondAttribute="leading" id="Ezx-zP-lKi"/>
                             <constraint firstItem="e92-S6-NLg" firstAttribute="top" secondItem="orS-j1-6t4" secondAttribute="top" id="GVl-Jn-4de"/>
                             <constraint firstItem="vzH-Oy-5SP" firstAttribute="leading" secondItem="orS-j1-6t4" secondAttribute="leadingMargin" constant="24" id="JHS-HD-C3P"/>
@@ -327,7 +361,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Ruy-sc-6Cp" secondAttribute="trailing" constant="24" id="WXY-Hi-qwv"/>
                             <constraint firstAttribute="trailing" secondItem="e92-S6-NLg" secondAttribute="trailing" id="YFp-87-cwK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aHZ-5W-N0T" secondAttribute="trailing" constant="24" id="fwV-P8-6qC"/>
+                            <constraint firstItem="AEh-c7-EgC" firstAttribute="centerX" secondItem="orS-j1-6t4" secondAttribute="centerX" id="gsq-09-Mxi"/>
                             <constraint firstItem="A76-Ox-Bm3" firstAttribute="leading" secondItem="orS-j1-6t4" secondAttribute="leading" id="iVI-oc-dCe"/>
+                            <constraint firstItem="AEh-c7-EgC" firstAttribute="top" secondItem="aHZ-5W-N0T" secondAttribute="bottom" constant="8" id="iVz-gG-OjY"/>
                             <constraint firstItem="JgI-dY-YFe" firstAttribute="top" secondItem="xl5-T9-RJJ" secondAttribute="bottom" constant="50" id="oVd-Ng-Mq1"/>
                             <constraint firstItem="A76-Ox-Bm3" firstAttribute="top" secondItem="orS-j1-6t4" secondAttribute="top" id="rOy-wh-N0v"/>
                             <constraint firstItem="vzH-Oy-5SP" firstAttribute="top" secondItem="Ruy-sc-6Cp" secondAttribute="bottom" constant="20" id="uLW-ep-ybs"/>

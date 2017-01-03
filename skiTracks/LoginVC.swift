@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
@@ -42,6 +44,32 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func facebookLoginPressed(_ sender: Any) {
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                self.createAlertController(title: "Login misluk", message: "Login via Facebook mislukt, probeer het later opnieuw", alertTitle: "OK")
+            } else if result?.isCancelled == true {
+                self.createAlertController(title: "Login mislukt", message: "Login via Facebook mislukt, probeer het later opnieuw", alertTitle: "OK")
+            } else {
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func firebaseAuth(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                self.createAlertController(title: "Login mislukt", message: "Login mislukt, probeer het later opnieuw", alertTitle: "OK")
+            } else {
+                
+            }
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

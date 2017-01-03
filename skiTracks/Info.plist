@@ -53,5 +53,27 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Pretty, pretty please?!</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb848403555296543</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>848403555296543</string>
+    <key>FacebookDisplayName</key>
+    <string>skiTracks</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>{human-readable reason for photo access}</string>
 </dict>
 </plist>

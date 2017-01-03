@@ -17,11 +17,9 @@ class FirstViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         guard FIRAuth.auth()?.currentUser != nil else {
             performSegue(withIdentifier: "LoginVC", sender: nil)
             return
-            
         }
     }
     
